@@ -4,9 +4,9 @@
       admin:
         one: Administrador
         other: Administradores
-      profile:
-        one: Perfil
-        other: Perfis
+      user:
+        one: Usuário
+        other: Usuários
     attributes:
       admin:
         id: Código
