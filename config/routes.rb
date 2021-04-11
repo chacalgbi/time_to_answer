@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   namespace :site do
     get 'welcome/index'
   end
@@ -6,7 +7,8 @@ Rails.application.routes.draw do
     get 'welcome/index'
   end
   namespace :admins_backoffice do
-    get 'welcome/index'
+    get 'welcome/index' # Rota para o DashBoard
+    resources :admins, only: [:index, :edit, :update] # Rota para a lista de Administradores
   end
   
   devise_for :admins
