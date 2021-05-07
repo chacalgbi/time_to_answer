@@ -10,8 +10,11 @@
 	    <tr>
 	      <th scope="col">ID</th>
 	      <th scope="col">Email</th>
-	      <th scope="col">Editar</th>
-	      <th scope="col">Apagar</th>
+	      <th scope="col">
+	      	<%= link_to new_admins_backoffice_admin_path, class: "btn btn-success btn-circle" do %>
+	      		<i class="fa fa-plus"></i>
+	      	<% end %>
+	      </th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -19,17 +22,11 @@
 		    <tr>
 		      <th scope="row"><%= admin.id %></th>
 		      <td><%= admin.email %></td>
-		      <td style="width: 100px">
-
-
-		      <%= link_to edit_admins_backoffice_admin_path(admin), class:"btn btn-primary btn-circle" do %>
-		      	<i class="fa fa-edit"> </i>
-		      <% end %>
-
-
-		      <td style="width: 100px"><button type="button" class="btn btn-danger  btn-circle"><i class="fa fa-minus"></i></button></td>
+		      <td style="width: 100px"><%= link_to edit_admins_backoffice_admin_path(admin), class:"btn btn-primary btn-circle" do %><i class="fa fa-edit"> </i><% end %></td>
+		      <td style="width: 100px"><%= link_to admins_backoffice_admin_path(admin), method: :delete, class:"btn btn-danger btn-circle", data: {confirm: "Deseja realmente excluir este administrador?"} do %><i class="fa fa-minus"> </i><% end %></td>
 		    </tr>
 	    <% end %>
 	  </tbody>
 	</table>
+	<div style="text-align: center;"><%= paginate @admins %></div>
 </div>

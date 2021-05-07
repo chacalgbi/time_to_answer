@@ -89,6 +89,7 @@
                     <div class="container-fluid">
 
                         <!-- Page Heading -->
+                        <%= action_name %>
                           <%= yield %>
 
                     </div>
@@ -114,5 +115,15 @@
         <a class="scroll-to-top rounded" href="#page-top">
             <i class="fas fa-angle-up"></i>
         </a>
+        <% if notice %>
+            <%= javascript_tag do %>
+                $.notify({
+                    title: '<strong>Aviso: </strong>',
+                    message: '<%= notice %>'
+                },{
+                    type: 'success'
+                });
+            <% end %>
+        <% end %>
     </body>
 </html>

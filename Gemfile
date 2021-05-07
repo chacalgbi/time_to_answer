@@ -18,6 +18,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'faker'
 gem 'awesome_print'
+gem 'bootstrap-growl-rails', '~> 3.1', '>= 3.1.3'
+gem 'kaminari'
+gem 'kaminari-i18n'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
