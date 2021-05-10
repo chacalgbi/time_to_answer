@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   namespace :admins_backoffice do
     get 'welcome/index' # Rota para o DashBoard
     resources :admins
+    resources :subjects
+    resources :questions
   end
   
   devise_for :admins
