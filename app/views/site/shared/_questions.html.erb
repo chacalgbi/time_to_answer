@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+</div>
+
+<% @questions.each do |question| %>
+	<div class="card">
+	  <div class="card-header">
+	    <%= question.description %>
+	  </div>
+	  <div class="card-body">
+	    <blockquote class="blockquote mb-0">
+	      	<ul>
+	      		<% question.answers.each do |answer| %>
+	      		<li><%= answer.description %></li>
+	      		<% end %>
+	      	</ul>
+	    </blockquote>
+	  </div>
+	</div>
+<% end %>
+
+<div class="text-center">
+	<%= paginate @questions %>
+</div>
