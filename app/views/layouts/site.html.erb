@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <p><%= params %></p>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <%= link_to 'HOME', inicio_path, class:"navbar-brand" %> 
@@ -21,14 +22,10 @@
             <li class="nav-item"> <%= link_to 'Administrador', admins_backoffice_welcome_index_path, class:"nav-link" %> </li>
           </ul>
 
-
           <%= form_with(url: site_search_path, local: true, method: :get, class:"form-inline my-2 my-lg-0") do |form| %>
             <%= form.text_field :term, class:"form-control mr-sm-2", placeholder:"Digite Algo" %>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
           <% end %>
-
-
-
 
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
