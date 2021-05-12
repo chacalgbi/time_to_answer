@@ -1,0 +1,24 @@
+var element = document.getElementById('submit_<%= @answer.question_id %>');
+
+element.classList.remove('btn-defaut');
+element.classList.remove('btn-success');
+element.classList.remove('btn-danger');
+
+if (<%= @answer.correct %>) {
+	element.classList.add('btn-success');
+	$.notify({
+	    title: '<strong>Aviso: </strong>',
+	    message: 'Você Acertou!'
+		},{
+	    type: 'success'
+	});
+} else{
+	element.classList.add('btn-danger');
+	$.notify({
+	    title: '<strong>Aviso: </strong>',
+	    message: 'Infelizmente você errou :('
+		},{
+	    type: 'danger'
+	});
+
+}

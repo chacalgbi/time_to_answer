@@ -1,1 +1,7 @@
-<h1>O id da resposta é: <%= params[:answer] %></h1>
+<%= @answer.inspect %>
+<br><br><hr>
+<% if @answer.correct == true %>
+<h1 style="color: green";>Parabéns! você acertou! \o/</h1>
+<% else %>
+<h1 style="color: red";>Infelizmente você errou! :(</h1>
+<% end %>
