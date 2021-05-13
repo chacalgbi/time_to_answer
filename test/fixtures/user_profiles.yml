@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: 
+  gender: 
+  birthdate: 2021-05-13
+  user: one
+
+two:
+  address: 
+  gender: 
+  birthdate: 2021-05-13
+  user: two

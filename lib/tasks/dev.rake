@@ -72,6 +72,15 @@ namespace :dev do
       end
   end
 
+  desc "Reseta o contador dos assuntos"
+  task reset_subject_count: :environment do
+      mostrar("Resetando contador dos assuntos...") do
+        Subject.all.each do |subject|
+          Subject.reset_counters(subject.id, :questions)
+        end
+      end
+  end
+
   private
 
   def mostrar(inicio, fim = "Concluído!")
