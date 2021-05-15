@@ -12,8 +12,8 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require jquery.min
-//= require jquery.easing.min
+//= require jquery
+//= require jquery-ui/datepicker
 //= require bootstrap.bundle.min
 //= require sb-admin-2.min
 //= require bootstrap-notify

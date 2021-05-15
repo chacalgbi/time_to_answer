@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'jquery-rails', '~> 4.4'
 gem 'faker'
 gem 'awesome_print'
 gem 'bootstrap-growl-rails', '~> 3.1', '>= 3.1.3'
@@ -46,6 +47,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'rails-i18n', '~> 5.1'
 gem 'tty-spinner'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
