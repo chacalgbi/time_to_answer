@@ -1,1 +1,11 @@
-<h1>UsersBackoffice::Welcome#index</h1>
+<h1>Seja bem-vindo! <%= current_user.first_name %></h1>
+
+<br>
+<h2>Total de Questões</h2>
+<%= @user_statistic.total_questions %>
+<br>
+<h2>Questões Certas</h2>
+<%= @user_statistic.right_questions %>
+<br>
+<h2>Questões Erradas</h2>
+<%= @user_statistic.wrong_questions %>
