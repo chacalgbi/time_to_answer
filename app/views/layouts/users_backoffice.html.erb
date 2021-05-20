@@ -42,7 +42,7 @@
                 <span>Bem Vindo,</span>
                 <h2><%= current_user.full_name %></h2>
                 <br>
-                <%= link_to image_tag(avatar_url, alt:"...", class:"img-circle profile_img"), '#', "data-toggle":"modal", "data-target":"#avatarModal" %>
+                <%= link_to image_tag(avatar_url, alt:"...", class:"img-circle profile_img", id:"avatar1"), '#', "data-toggle":"modal", "data-target":"#avatarModal" %>
                 <br><br>
                 <%= link_to 'Editar', users_backoffice_profile_path, class:"btn btn-primary" %> 
               </div>
@@ -53,7 +53,7 @@
         <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <%= form_with(url: users_backoffice_profile_path, model: current_user, local: true) do |form| %>
+              <%= form_with(url: users_backoffice_profile_path, model: current_user) do |form| %>
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">Selecionar Foto</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -62,7 +62,7 @@
                 </div>
                 <div class="modal-body">
                   <%= form.fields_for :user_profile do |profile_form| %>
-                  <%= image_tag(avatar_url, alt:"...", class:"img-circle profile_img") %>
+                  <%= image_tag(avatar_url, alt:"...", class:"img-circle profile_img", id:"avatar2") %>
                     <%= profile_form.file_field :avatar %>
                   <% end %>
                 </div>
