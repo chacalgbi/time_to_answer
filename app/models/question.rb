@@ -18,4 +18,13 @@ class Question < ApplicationRecord
   	includes(:answers, :subject).order('created_at desc').page(page)
   }
 
+   #CallBack
+   after_create :set_statistic
+
+  private
+
+     def set_statistic
+     AdminStatistic.set_event(AdminStatistic::EVENTS[:total_questions])
+   end
+
 end
