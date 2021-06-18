@@ -66,6 +66,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler', '~> 2.0'
   gem "capistrano-rails", "~> 1.6", require: false
+  gem "capistrano3-unicorn"
   gem 'ed25519', '>= 1.2', '< 2.0'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 end
@@ -80,6 +81,7 @@ end
 
 group :production do
   gem 'mysql2' #, '~> 0.3.18'
+  gem 'unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
