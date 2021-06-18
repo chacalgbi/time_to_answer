@@ -10,15 +10,16 @@ namespace :dev do
       mostrar("Apagando  BD...") {%x(rails db:drop)}
       mostrar("Criando   BD...") {%x(rails db:create)}
       mostrar("Migrando  BD...") {%x(rails db:migrate)}
+    end
       mostrar("Criando Admin padrão...") {%x(rails dev:add_admin)}
       mostrar("Criando Admin extras...") {%x(rails dev:add_admins_extras)}
       mostrar("Criando User padrão...") {%x(rails dev:add_user)}
       mostrar("Cadastrando assuntos padrões...") {%x(rails dev:add_subjects)}
       mostrar("Cadastrando perguntas e respostas...") {%x(rails dev:add_answers_and_questions)}
       
-    else
-      puts "Você não está no modo desenvolvimento"      
-    end
+    #else
+    #  puts "Você não está no modo desenvolvimento"      
+    #end
   end
 
   desc "Adiciona o administrador padrão"
